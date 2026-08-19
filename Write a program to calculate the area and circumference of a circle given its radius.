@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+#define PI 3.14
+
+int main() {
+    double radius, area, circumference;
+
+    printf("Enter the radius of the circle: ");
+    if (scanf("%lf", &radius) != 1 || radius < 0) {
+        printf("Error: Please enter a valid non-negative number.\n");
+        return 1;
+    }
+
+    area = PI * radius * radius;
+    circumference = 2 * PI * radius; 
+
+    printf("\n--- Circle Calculations ---\n");
+    printf("Radius:        %.4f\n", radius);
+    printf("Area:          %.4f\n", area);
+    printf("Circumference: %.4f\n", circumference);
+
+    return 0;
+}
